@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>赛事详情</title>
+    <style>
+    </style>
+</head>
+<body>
+    <header class="heade">
+        <div class="head-left">
+            <p style="height: 1.6rem;text-align: center;">
+                <a style="position:absolute;top:6px;left:0;padding:8px;" id="p_history" href="#"><span  class="sp1"></span></a>
+                <span id="span_ht2" class="sp2" ></span>
+            </p>
+        </div>
+        <!-- 头部场次介绍 -->
+        <div id="Hname" class="head-name" >
+        </div>
+    </header>
+    <section class="section-one" >
+        <div class="d-ul">
+            <ul class="tab_ul">
+                <li data-v="SK" id="sk_title" class="f-li1 f-li">实况</li>
+                <li data-v="PL" class="f-li1" id="F_programme">赔率</li>
+                <li data-v="JF" class="f-li2" id="F_Analysis">积分</li>
+                <li data-v="ZR" class="f-li3" id="F_Index">阵容</li>
+                <li data-v="FX" class="f-li3" id="F_fenx">分析</li>
+            </ul>
+        </div>
+     <!-- 赔率 积分榜-->
+        <div class="tab_div">
+            <div id="sk_cent" class="div_sk" style="display:block;">
+                <div class="Lsk_div">
+                    <ul>
+                        <li class="col_328fde">主队进球</li>
+                        <li>时间</li>
+                        <li class="col_328fde">客队进球</li>
+                    </ul>
+                </div>
+                <div class="Lsk_div Lsk_ul">
+                    <p style="text-align:center;height:50px;line-height:50px;border-bottom:1px solid #ccc;">暂无赛事</p>
+                </div>
+            </div>
+            <!-- 欧赔 -->
+            <div class="div_pl" >
+                <div class="pl_tit">
+                    <ul class="tit_ul">
+                        <li id="Pl_op" class="pl_color">欧赔</li>
+                        <li id="Pl_yp">亚盘</li>
+                        <li id="Pl_dx">大小球</li>
+                    </ul>
+                </div>
+                <div class="pl_cen">
+                    <!-- 欧赔 -->
+                    <div class="op_div s_w33">
+                        <ul class="op_title">
+                            <li>公司</li>
+                            <li>初始赔率</li>
+                            <li>最新赔率</li>
+                        </ul>
+                        <div id="op_content" class="op_cent">
+                            <p style="text-align:center;height:50px;line-height:50px;border-bottom:1px solid #ccc;">暂无赛事赔率</p>
+                            <!-- <ul class="cen_ul">
+                                <li>99家平均</li>
+                                <li><span>2.87</span><span>3.25</span><span>2.50</span></li>
+                                <li><span>↓2.87</span><span>↓3.25</span><span>↑2.50</span></li>
+                            </ul> -->
+                        </div>
+                    </div>
+                    <!-- 亚盘 -->
+                    <div class="op_div s_w27">
+                        <ul class="op_title clo_666">
+                            <li style="color:#666;font-size:14px;">公司</li>
+                            <li><span>主水</span><span>初盘</span><span>客水</span></li>
+                            <li><span>主水</span><span>最新盘</span><span>客水</span></li>
+                        </ul>
+                        <div id="op_yap" class="op_cent">
+                            <p style="text-align:center;height:50px;line-height:50px;border-bottom:1px solid #ccc;">暂无赛事</p>
+                            <!-- <ul class="cen_ul">
+                                <li>99家平均</li>
+                                <li><span>2.87</span><span>3.25</span><span>2.50</span></li>
+                                <li><span>↓2.87</span><span>↓3.25</span><span>↑2.50</span></li>
+                            </ul> -->
+                        </div>
+                    </div>
+                    <!-- 大小球 -->
+                    <div class="op_div s_w33">
+                        <ul id="DX" class="op_title">
+                            <li>公司</li>
+                            <li><span>大球</span><span>初盘</span><span>小球</span></li>
+                            <li><span>大球</span><span>最新盘</span><span>小球</span></li>
+                        </ul>
+                        <div id="op_dxq" class="op_cent">
+                           <p style="text-align:center;height:50px;line-height:50px;border-bottom:1px solid #ccc;">暂无赛事</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- 积分 -->
+            <div id="L_jf" class="div_jf">
+                <div id="jf_hea" class="jf_Gli jf_title">
+                    <p class="jf_p">积分榜</p>
+                    <ul class="jf_ul">
+                        <li>排名</li>
+                        <li>球队</li>
+                        <li>场次</li>
+                        <li>胜</li>
+                        <li>平</li>
+                        <li>负</li>
+                        <li>积分</li>
+                    </ul>
+                </div>
+                <div id="jf_hom" class="jf_Gli jf_cen">
+                    <p style="text-align:center;height:50px;line-height:50px;border-bottom:1px solid #ccc;">暂无赛事积分</p>
+                    <!-- <ul>
+                        <li>1</li>
+                        <li>曼城</li>
+                        <li>38</li>
+                        <li>35</li>
+                        <li>5</li>
+                        <li>3</li>
+                        <li>100</li>
+                    </ul> -->
+                </div>
+            </div>
+             <!-- 阵容 -->
+            <div class="div_zr">
+                <div class="zr_head">
+                    <ul>
+                        <li>号码<span>&nbsp;&nbsp;&nbsp;&nbsp;主队球员</span></li>
+                        <li>出场(首/替)</li>
+                        <li><span>客队球员&nbsp;&nbsp;&nbsp;&nbsp;</span>号码</li>
+                    </ul>
+                </div>
+                <div id="z_le" class="zr_cent zr_left">
+                    <p style="text-align:center;height:50px;line-height:50px;">暂无赛事</p>
+                    <!-- <ul>
+                        <li class="li_sx"><p class="s_ff7f7f">3</p></li>
+                        <li class="li_nam">库尔图瓦</li>
+                        <li class="li_mj">门将</li>
+                        <li class="li_st">28(28/0)</li>
+                    </ul> -->
+                </div>
+                <div id="z_ri" class="zr_cent zr_right">
+                    <p style="text-align:center;height:50px;line-height:50px;">暂无赛事</p>
+                    <!-- <ul>
+                        <li class="li_st">28(28/0)</li>
+                        <li class="li_mj">门将</li>
+                        <li class="li_nam">库尔图瓦</li>
+                        <li class="li_sx"><p class="s_6cb5f3">45</p></li>
+                    </ul> -->
+                </div>
+                <p style="background:#f0f0f0;width: 100%;height:10px;margin-top:-5px;"></p>
+            </div>
+             <!-- 分析 -->
+            <div class="div_fx">
+                <!-- <div> -->
+                    <div class="fxgy_li ls_head">
+                        <p>历史交锋</p>
+                        <ul>
+                            <li>赛事</li>
+                            <li>日期</li>
+                            <li>主队</li>
+                            <li>比分</li>
+                            <li>客队</li>
+                            <li>胜负</li>
+                        </ul>
+                    </div>
+                    <div id="lsjf" class="fxgy_li ls_cent">
+                        <p style="text-align:center;height:50px;line-height:50px;border-bottom:1px solid #ccc;">暂无赛事</p>
+                        <!-- <p class="F_p Fp_left">
+                            <span>主队:</span>
+                            <span>5胜</span>
+                            <span>3平</span>
+                            <span>2负</span>
+                        </p>
+                        <p class="F_p Fp_righ">
+                            <span>主队主场:</span>
+                            <span>4胜</span>
+                            <span>2平</span>
+                            <span>1负&nbsp;&nbsp;&nbsp;</span>
+                        </p> -->
+                    </div>
+                    <!-- 主近市场战绩 -->
+                    <div class="fxgy_li ls_head">
+                        <p><span id="name_zc"></span>近十场战绩</p>
+                        <ul>
+                            <li>赛事</li>
+                            <li>日期</li>
+                            <li>主队</li>
+                            <li>比分</li>
+                            <li>客队</li>
+                            <li>胜负</li>
+                        </ul>
+                    </div>
+                    <div id="z_jsc" class="fxgy_li ls_cent">
+                        <p style="text-align:center;height:50px;line-height:50px;border-bottom:1px solid #ccc;">暂无赛事积分</p>
+                       <!--  <p class="F_p Fp_left">
+                           <span>主队:</span>
+                           <span>5胜</span>
+                           <span>3平</span>
+                           <span>2负</span>
+                       </p>
+                       <p class="F_p Fp_righ">
+                           <span>主队主场:</span>
+                           <span>4胜</span>
+                           <span>2平</span>
+                           <span>1负&nbsp;&nbsp;&nbsp;</span>
+                       </p> -->
+                    </div>
+                    <!-- 客近十场战绩 -->
+                    <div class="fxgy_li ls_head">
+                        <p><span id="name_kc"></span>近十场战绩</p>
+                        <ul>
+                            <li>赛事</li>
+                            <li>日期</li>
+                            <li>主队</li>
+                            <li>比分</li>
+                            <li>客队</li>
+                            <li>胜负</li>
+                        </ul>
+                    </div>
+                    <div id="k_jsc" class="fxgy_li ls_cent">
+                        <p style="text-align:center;height:50px;line-height:50px;border-bottom:1px solid #ccc;">暂无赛事积分</p>
+                        <!-- <p class="F_p Fp_left">
+                            <span>主队:</span>
+                            <span>5胜</span>
+                            <span>3平</span>
+                            <span>2负</span>
+                        </p>
+                        <p class="F_p Fp_righ">
+                            <span>主队主场:</span>
+                            <span>4胜</span>
+                            <span>2平</span>
+                            <span>1负&nbsp;&nbsp;&nbsp;</span>
+                        </p> -->
+                    </div>
+                    <!-- 切尔西近三场 -->
+                    <div class="fxgy_li ls_head">
+                        <p><span id="Zname_jwc"></span>-未来近五场赛事</p>
+                        <ul>
+                            <li>赛事</li>
+                            <li>日期</li>
+                            <li>主队</li>
+                            <li>比分</li>
+                            <li>客队</li>
+                            <li>胜负</li>
+                        </ul>
+                    </div>
+                    <div id="z_jwc" class="fxgy_li ls_cent">
+                        <p style="text-align:center;height:50px;line-height:50px;border-bottom:1px solid #ccc;">暂无赛事积分</p>
+                    </div>
+                    <!-- 曼联近三场 -->
+                    <div class="fxgy_li ls_head">
+                        <p><span id="Kname_jwc"></span>-未来近五场赛事</p>
+                        <ul>
+                            <li>赛事</li>
+                            <li>日期</li>
+                            <li>主队</li>
+                            <li>比分</li>
+                            <li>客队</li>
+                            <li>胜负</li>
+                        </ul>
+                    </div>
+                    <div id="k_jwc" class="fxgy_li ls_cent">
+                        <ul>
+                            <li>挪威杯</li>
+                            <li>2018-05-31</li>
+                            <li>罗曼</li>
+                            <li>2-0</li>
+                            <li>切尔西</li>
+                            <li>负</li>
+                        </ul>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>

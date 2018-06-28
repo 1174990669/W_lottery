@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/swiper-3.4.2.jquery.min.js"></script>
+    <title>home</title> 
+</head>
+<body>
+    <header class="head-sai">
+       <div>
+            <p>
+                <span>
+                    <!-- <a class="a2" onclick="football()" href="#">足球 
+                    <a class="a3" onclick="basketball()" href="#">篮球</a> -->
+                    <a class="a2" id="soccer" href="javascript:void(0)">足球比分
+                    <a class="a3" id="basket_a3" href="javascript:void(0)">篮球比分</a>
+                </span>
+            </p>
+       </div>
+    </header>
+    <!-- 我的关注 -->
+    <!-- 足球赛事 -->
+    <section id="fo_soccer" class="section-foot">
+        <div class="div-ol">
+            <ol class="Tol_li">
+                <li class="z1" id="z-js">全部
+                    <span class="li-span1"></span>
+                </li>
+                <!-- <li onclick="Zimmediate()" class="foot_active">即时</li>  -->
+                <li class="z2" id="z-sg" >进行中
+                    <span class="li-span2"></span>
+                </li>
+                <li class="z3" id="z-sc">已结束
+                    <span class="li-span3"></span>
+                </li>
+            </ol>
+        </div>
+        <div class="div-ul Ldiv_ul">
+            <!-- 即时 -->
+            <ul id="div-sc"> 
+                <!-- <img style="position:absolute;z-index:-1;width:10rem;height:10rem;left:50%;top:50%;transform: translate(-50%, -50%);" src="images/log.gif" alt=""> -->
+            </ul>
+            <!-- 赛果 -->
+            <ul id="fo-sg">
+                <p id="p_null">暂无进行中的比赛</p>
+                <!-- <img style="position:absolute;z-index:-1;width:10rem;height:10rem;left:50%;top:50%;transform: translate(-50%, -50%);" src="images/log.gif" alt=""> -->
+            </ul>
+            <!-- 赛程 -->
+            <ul id="fo-sc">
+                <!-- <img style="position:absolute;z-index:-1;width:10rem;height:10rem;left:50%;top:50%;transform: translate(-50%, -50%);" src="images/log.gif" alt=""> -->
+            </ul>
+        </div>
+    </section>
+    <!-- 篮球赛事 -->
+    <section id="basketball" class="section-baske">
+        <div class="div-ol">
+            <ol>
+                <li class="l1" id="l-js">全部
+                    <span class="li-spa1"></span>
+                </li>
+                <li class="l2" id="l-sg">进行中
+                    <span class="li-spa2"></span>
+                </li>
+                <li class="l3" id="l-sc">已结束
+                    <span class="li-spa3"></span>
+                </li>
+            </ol>
+        </div>
+        <div class="div-ul">
+            <!-- 即时 -->
+            <ul id="ba-js"> 
+                <p id="p_null">暂无赛程</p>
+            </ul>
+            <!-- 赛果 -->
+            <ul id="ba-sg">
+                <p id="p_null">暂无赛程</p>
+            </ul>
+            <!-- 赛程 -->
+            <ul id="ba-sc">
+                <p id="p_null">暂无赛程</p>
+                <!-- <img style="position:absolute;z-index:-1;width:10rem;height:10rem;left:50%;top:50%;transform: translate(-50%, -50%);" src="images/log.gif" alt=""> -->
+            </ul>
+        </div>
+    </section>
+    <script>
+        //follow(关注) football(足球)  Basketball(篮球)
+    </script>
+</body>
+</html>

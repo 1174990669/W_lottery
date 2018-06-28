@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html >
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<title></title>
+ 
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>  
+
+<link rel="stylesheet" href="package/big.css">
+<script>
+    var ConfigObj = {
+        platForm: 'ios', // web 平台
+        isDebug: false // 设为 true 表示是测试环境
+//      version: '1.0.0'
+    }
+</script>
+<script type="text/javascript" src="package/lib.js"></script>
+<script type="text/javascript" src="package/big.js"></script>
+<!-- <script type="text/javascript" src="package/config.js"></script> -->
+<!-- <script type="text/javascript" src="cordova/cordova.js"></script> -->  <!-- cordova 功能暂时注释 --> 
+
+<style>
+  #bindBank_cz,#withDraw_cz{background:#ff5024;border-radius:30px;color:#fff;position:absolute;right:10px;top:4px;width:100px;height:40px;line-height:40px;text-align:center;font-size:16px;}
+  .user_id{padding-left: 0;position:absolute;top:12px;left: 0;font-size:20px!important;}
+  .user_phone{position: absolute;left:0;font-size:18px!important;}
+  .li_icon{width:2px;height:30px;float:right;margin-top:-44px;background:#fff; }
+  .div_lo{position: absolute;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.4);display:none;z-index:9999;display:block;}
+  .d_im{position: absolute;top:50%;left: 50%;transform: translate(-50%,-50%);z-index:99;}
+
+  .div_logo{position:fixed;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.4);display:none;z-index:9999;}
+  .d_img{position: absolute;top:50%;left: 50%;transform: translate(-50%,-50%);z-index:99;}
+  #img_p{text-align:center;background:#ff5024;color:#fff;font-size:18px;}
+  .d_img img{width: 100%;}
+  .d_im img{width: 100%;}
+  .pos_fix {font-size: 16px;}
+  .i-null{position:fixed;z-index: 90;right:8%;top:92px;background: url(images/img/trend.png);background-size: 100% 100%;width:28px;height:25px;}
+</style>
+</head>
+<body>
+<div id="onLin" class="div_lo ">
+    <div class="d_im">
+        <img src="images/log.gif" alt="豪中彩">
+    </div>
+</div>
+<div class="div_logo">
+    <div class="d_img">
+        <img src="images/log.gif" alt="豪中彩">
+    </div>
+</div>
+<!-- <div id="onLin" class="div_lo ">
+    <div class="d_im">
+        <img src="images/log.gif" alt="豪中彩">
+    </div>
+</div>
+<div class="onLin_img" id="onLin_png" onclick="document.location.reload()">
+    <img src="images/wait_loading.gif" alt="豪中彩">
+</div>
+<div class="div_logo">
+    <div class="d_img">
+        <img src="images/log.gif" alt="豪中彩">
+    </div>
+</div> -->
+<div class="bottomcon" >
+    <ul class="nav nav-bot clearfix" id="home_navObj" style="display: none;">
+        <li>
+            <a href="javascript:void(0)" class="on" data-t="home">
+                <p><em class="navicons n-lottery"></em></p>
+                <span>彩票</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" data-t="kaijiangIndex">
+                <p><em class="navicons n-kj"></em></p>
+                <span>开奖</span>
+            </a>
+        </li>
+        <!-- <li>
+             <a href="javascript:void(0)" data-t="searchSite">
+                 <p><em class="navicons n-disc"></em></p>
+                 <span>发现</span>
+             </a>
+         </li>  -->
+        <li>
+            <a href="javascript:void(0)" data-t="football">
+                <p><em class="navicons n-disc"></em></p>
+                <span>比分</span>
+            </a>
+        </li>
+        <li >
+            <a href="javascript:void(0)" data-t="userCenter">
+                <p><em class="navicons n-user"></em></p>
+                <span >我的</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+var clipboar = new Clipboard('#btn_gzh');
+clipboar.on('success', function(e) {
+  var ms = e.trigger.getAttribute('aria-label');
+  // alert(msg);
+  $.alertMsg(ms,true)
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    // console.info('Trigger:', e.trigger);
+    e.clearSelection();
+});
+var clipboard = new Clipboard('#btn_foo');
+clipboard.on('success', function(e) {
+  var msg = e.trigger.getAttribute('aria-label');
+  // alert(msg);
+  $.alertMsg(msg,true)
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    // console.info('Trigger:', e.trigger);
+
+    e.clearSelection();
+});
+/*var clipboard = new Clipboard('#btn_foo');
+    clipboard.on('success', function(e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        $.alertMsg("复制成功",true);
+        e.clearSelection();
+    });*/
+    /*clipboard.on('error', function(e) {
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+    });*/
+$('html').attr("style","overflow:visible!important")
+window.onload=function(){
+    var poData= {access_token: loginObj.access_token}
+}
+
+function loginout(){
+    if (navigator.onLine) { //正常工作
+        layer.open({
+            className: 'popuo-login',
+            content: '您确定要退出登录？',
+            btn: ['确认', '取消'],
+            shadeClose: false,
+            yes: function(){
+                $.ajax({
+                    url:ConfigObj.localSite + '?m=user.account.center',
+                    async: false,
+                    success: function(data){
+                        location.href = "jy://OpenLogout";
+                        layer.closeAll();
+                    },
+                    error: function(XMLHttpRequest, textStatus, errorThrown){
+                        layer.closeAll();
+                        alert('网络异常');
+                    }
+                 });
+                 
+            }, no: function(){
+                layer.closeAll();
+            }
+        }); 
+    } else {
+        //执行离线状态时的任务
+        alert('网络异常');
+    }
+}
+function checkedition(){
+     location.href = "jy://CheckVersion";
+}
+function uppwd(){
+     location.href = "<{$siteurl.appformerchant.url}>/appuser/updatepwd?newActivity=1";
+}
+
+document.body.addEventListener('touchstart', function () { });
+Global.initNav();      //底部导航功能 
+Global.checkUpdate();  //检查版本更新
+if(ConfigObj.platForm == 'android' && typeof android_obj != 'undefined'){
+  if(!Global.addBackEvent){  //手机硬键的返回事件
+    Global.addBackEvent =  true;
+    document.addEventListener('deviceready', function () {
+      document.addEventListener("backbutton", exitMyapp, false);
+    }, false);
+    var currentTime,firstTime,secondTime,clickCount=0;
+    function exitMyapp() {
+          var checkInput = function () {
+                    // 获得焦点的元素
+                    var elem = document.querySelectorAll(':focus');
+                    if (elem.length) {
+                        var focusElem = elem[0];
+
+                        console.dir(focusElem);
+
+                        if (focusElem.tagName == 'TEXTAREA'
+                            || (focusElem.tagName == 'INPUT'
+                            && ['text', 'password', 'tel', 'url', 'number', 'range', 'search'].indexOf(focusElem.type) != -1))
+                            return focusElem;
+                    }
+                    return null;
+                };
+
+          var checkResult = checkInput();
+
+          if (checkResult) {
+              // 失去焦点
+                    checkResult.blur();
+                } else {
+                  var pageId = Global.getActivePage()[0].id;
+                  if(ConfigObj.showWhere){
+                    switch (pageId){
+                    case 'home':
+                clickCount++;
+                android_obj.toast('再按一次退出');
+                currentTime = new Date();
+                if (clickCount == 1) {
+                  firstTime=currentTime.getSeconds()+currentTime.getMinutes()*60+currentTime.getHours()*3600;
+                } else if(clickCount == 2){
+                  secondTime=currentTime.getSeconds()+currentTime.getMinutes()*60+currentTime.getHours()*3600;
+                  if(secondTime-firstTime<2){  
+                    navigator.app.exitApp();
+                        }else {  
+                            clickCount=0;  
+                        }; 
+                };
+                        break;
+                    default:
+                        if (window[pageId + 'Obj']) {
+                            window[pageId + 'Obj'].goBack();
+                        } else {
+                            homeObj.show();
+                        }
+                        break;
+                }
+                  } else{
+                    switch (pageId){
+                    case 'indexNews':
+                clickCount++;
+                android_obj.toast('再按一次退出');
+                currentTime = new Date();
+                if (clickCount == 1) {
+                  firstTime=currentTime.getSeconds()+currentTime.getMinutes()*60+currentTime.getHours()*3600;
+                } else if(clickCount == 2){
+                  secondTime=currentTime.getSeconds()+currentTime.getMinutes()*60+currentTime.getHours()*3600;
+                  if(secondTime-firstTime<2){  
+                    navigator.app.exitApp();
+                        }else {  
+                            clickCount=0;  
+                        }; 
+                };
+                        break;
+                    default:
+                        if (window[pageId + 'Obj']) {
+                            window[pageId + 'Obj'].goBack();
+                        } else {
+                            homeObj.show();
+                        }
+                        break;
+                }
+                  }
+                }
+      }
+  } 
+}
+if(ConfigObj.platForm == 'ios'){
+  document.addEventListener('deviceready',function(){
+    if(typeof StatusBar != 'undefined'){
+      StatusBar.hide(); 
+    }
+  },false)
+}
+Global.checkRoute();   //检查路由
+
+document.addEventListener('touchend', function (e) {
+});
+</script>
+</body> 
+
+</html>
